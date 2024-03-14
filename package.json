@@ -1,4 +1,13 @@
 {
+  "name": "old-chang-kee-website-revamp",
+  "version": "1.0.0",
+  "description": "To start mysql, in the terminal, type in `mysql -u root`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node node_modules/db-migrate/bin/db-migrate"
+    
+  },
   "dependencies": {
     "db-migrate": "^0.11.14",
     "db-migrate-mysql": "^2.3.2",
@@ -8,8 +17,8 @@
     "mysql": "^2.18.1",
     "wax-on": "^1.2.2"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "node node_modules/db-migrate/bin/db-migrate"
-  }
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

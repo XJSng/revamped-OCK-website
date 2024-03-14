@@ -27,7 +27,7 @@ const productsRoutes = require("./routes/products.js")
 async function main() {
     app.use("/products", productsRoutes)
 app.get("/", (req, res)=>{
-    res.render()
+    res.render("index")
 })
 
 }
