@@ -32,8 +32,6 @@ exports.up = function (db) {
       unsigned: true,
       notNull: true
     }
-
-
   });
 };
 

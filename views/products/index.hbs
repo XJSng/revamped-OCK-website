@@ -5,7 +5,46 @@ View all Old Chang Kee products here
 {{/block}}
 
 {{#block "content"}}
-<p>Add in content here</p>
+<div class="mt-3 d-flex justify-content-end">
+<a href="/products/create" class="btn btn-success ">Create New Product</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            {{!-- <th>Category</th> --}}
+            {{!-- <th>Tags</th> --}}
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>${{stringToDollars this.cost}}</td>
+           {{!-- <td>{{this.category.name}}</td> --}}
+            {{!-- <td>{{this.imageUrl}}</td> --}}
+             {{!-- <td>{{#each this.tags}}
+                <span class="badge bg-primary">{{this.name}}</span>
+             {{/each}}
+             </td> --}}
+             <td>
+                <a href="/products/{{this.id}}/update"
+                    class="btn btn-primary btn-sm"
+                >Update</a>
+            </td>
+             <td>
+                <a href="/products/{{this.id}}/delete"
+                    class="btn btn-danger btn-sm"
+                >Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
 {{/block}}
 
 {{/extends}}
